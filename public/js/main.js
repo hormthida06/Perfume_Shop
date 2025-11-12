@@ -4,12 +4,12 @@ function renderProducts(products) {
     .map(
       (p) => `
       <div class="col-md-4 mb-4">
-        <div class="card h-100">
+        <div class="card product-card h-100">
           <img src="${p.img}" class="card-img-top" alt="${p.name}">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">${p.name}</h5>
             <p class="card-text text-primary fw-bold">$${p.price.toFixed(2)}</p>
-            <div class="mt-auto d-flex justify-content-between">
+            <div class="mt-auto d-flex justify-content-between gap-5">
               <a href="/detail?id=${p.id}" class="btn btn-outline-primary">View</a>
               <button class="btn btn-primary add-to-cart-btn" data-id="${p.id}">
                 Add to Cart
@@ -58,7 +58,7 @@ function renderDetail(product) {
 
         <!-- Buttons -->
         <button class="btn btn-primary btn-lg" id="add-to-cart-btn">Add to Cart</button>
-        <a href="index.html" class="btn btn-secondary btn-lg ms-2">Back</a>
+        <a href="/" class="btn btn-secondary btn-lg ms-2">Back</a>
       </div>
     </div>
   `;
