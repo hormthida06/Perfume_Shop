@@ -35,7 +35,7 @@ function renderProducts(products) {
 function renderDetail(product) {
   const container = document.getElementById("product-detail");
   container.innerHTML = `
-    <div class="row">
+    <div class="row" id="view">
       <!-- Product Image -->
       <div class="col-md-6">
         <img src="${product.img}" class="img-fluid rounded" alt="${product.name}">

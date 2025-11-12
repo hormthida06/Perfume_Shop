@@ -8,7 +8,6 @@
 
   <div class="header-tagline">
     <h1>Tagline describing your e-shop</h1>
-
     <center>
     <div id="slide">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -31,7 +30,7 @@
     <button class="btn btn-dark mx-2">All Products</button>
   </div>
 
-  <section id="products" class="py-5">
+  <section id="products">
     <div class="container">
       <h2 class="text-center mb-4">Our Products</h2>
       <div class="row">

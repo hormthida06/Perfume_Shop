@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-
-  <div class="container my-5">
-    <h2>Checkout</h2>
+<div id="body_Cart">
+  <div class="container">
+    <h1>Checkout</h1>
     <form id="checkout-form" class="row g-3">
       <div class="col-md-6">
         <label class="form-label">Full Name</label>
@@ -56,7 +56,9 @@
       e.preventDefault();
       alert("Order placed successfully! (Demo)");
       localStorage.removeItem("cart");
-      window.location.href = "index.html";
+      window.location.href = "/";
     });
   </script>
+</div>
+
 @endsection

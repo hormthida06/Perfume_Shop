@@ -6,7 +6,6 @@
   <title>@yield('pageTitle')</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ URL::asset('css/style.css')}}">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -15,7 +14,7 @@
   <link rel="stylesheet" href="{{ URL::asset('css/login.css')}}">
   <link rel="stylesheet" href="{{ URL::asset('css/cart.css')}}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
     .header-tagline { padding: 50px 0; text-align: center; }
@@ -101,26 +100,29 @@
     </div>
 </nav>
 
-<header class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="z-index:1020; top:80px;">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<header class="navbar navbar-expand-lg navbar-light bg-black fixed-top" style="z-index:1050; top:80px;">
+  <div class="container">
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto text-center">
-          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Men's</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Women's</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Fragrance</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Brand</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Black Friday</a></li>
-        </ul>
-      </div>
+    <div id="navbarNav" class="collapse navbar-collapse ">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Men's</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Women's</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Fragrance</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Brand</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Black Friday</a></li>
+      </ul>
     </div>
+  </div>
 </header>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
   <div id="content">@yield('content')</div>    
 
