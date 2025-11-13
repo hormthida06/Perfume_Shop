@@ -6,12 +6,12 @@
 
 @section('content')
 
-  <div class="header-tagline">
+  <div class="header-tagline"  >
     <h1>Tagline describing your e-shop</h1>
     <center>
     <div id="slide">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner"  style="border-radius: 20px;">
+          <div class="carousel-inner"  style="border-radius: 20px; padding-top:100px;">
               <div class="carousel-item active">
               <img src="img/img1.jpg" alt="Slide 1" class="d-block w-100" alt="...">
               </div>

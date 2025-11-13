@@ -41,24 +41,53 @@
       </div>
 
       <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+        <button type="submit" id="placeOrderBtn" class="btn btn-primary btn-lg">Place Order</button>
       </div>
     </form>
   </div>
 
-  <script src="{{ URL::asset('js/script.js')}}"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      renderOrderSummary();
-    });
-
-    document.getElementById("checkout-form").addEventListener("submit", (e) => {
-      e.preventDefault();
-      alert("Order placed successfully! (Demo)");
-      localStorage.removeItem("cart");
-      window.location.href = "/";
-    });
-  </script>
+  <!-- LOADING OVERLAY (QR + SPINNER) -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="overlay-content text-center text-white position-relative">
+      <button id="closeOverlayBtn" class="btn btn-danger btn-sm position-absolute top-0 end-0 m-3">✕</button>
+      <div class="spinner mb-3"></div>
+      <img src="{{ asset('img/khsqr.png') }}" alt="Scan to Pay" class="qr-image">
+      <p class="mt-3">Scan QR code to complete payment</p>
+    </div>
+  </div>
 </div>
+
+<script src="{{ URL::asset('js/script.js') }}"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    renderOrderSummary();   
+  });
+
+  const form = document.getElementById("checkout-form");
+  const overlay = document.getElementById("loadingOverlay");
+  const btn = document.getElementById("placeOrderBtn");
+  const closeBtn = document.getElementById("closeOverlayBtn");
+
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();   
+
+    btn.disabled = true;
+    btn.innerHTML = "Processing...";
+
+    overlay.classList.add("show");
+
+    setTimeout(() => {
+      window.location.href = "/checkout";   
+    }, 3000);
+  });
+
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.remove("show");
+    btn.disabled = false;
+    btn.innerHTML = "Place Order";
+  });
+</script>
 
 @endsection

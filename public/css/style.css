@@ -4,6 +4,16 @@
   filter: invert(1);
 }
 
+@media (min-width: 150px) {
+  nav .center {
+    width: 30%;
+  }
+
+  nav .cart{
+    width: 40%;
+  }
+}
+
 .container-fluid{
     width: 100%;
     height: 70px;
@@ -254,4 +264,51 @@ footer { background-color: #f8f9fa; padding: 20px 0; text-align: center; }
 
 #cart-count {
   font-size: 0.8rem;
+}
+
+/* QR */
+
+/* Overlay styling */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-overlay.show {
+  display: flex;
+}
+
+.overlay-content {
+  background: #222;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.qr-image {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }
